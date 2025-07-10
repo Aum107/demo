@@ -1,7 +1,7 @@
 name: Update BTC Predictions
 on:
   schedule:
-    - cron: '0 8 */2 * *'  # Every 2 days at 8AM
+    - cron: '20 22 */2 * *'  # Every 2 days at 8AM
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
@@ -28,14 +28,14 @@ jobs:
     
     - name: Convert Jupyter Notebook to Python script
       run: |
-        jupyter nbconvert --to script lstm_cnn_model.ipynb
-        jupyter nbconvert --to script xgboost_model.ipynb
+        jupyter nbconvert --to script LSTM_CNN_Prediction_model.ipynb
+        jupyter nbconvert --to script XGBoost_Prediction_model.ipynb
     
     - name: Run LSTM CNN model
-      run: python lstm_cnn_model.py
+      run: python LSTM_CNN_Prediction_model.py
     
     - name: Run XGBoost model
-      run: python xgboost_model.py
+      run: python XGBoost_Prediction_model.py
     
     - name: Commit and push changes
       run: |
