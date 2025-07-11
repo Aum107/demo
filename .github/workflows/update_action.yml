@@ -1,7 +1,7 @@
 name: Update BTC Predictions
 on:
   schedule:
-    - cron: '37 06 */ * *'  # Every 2 days at 8AM
+    - cron: '45 06 * * *'  # Every 2 days at 8AM
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
