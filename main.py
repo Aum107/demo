@@ -115,10 +115,4 @@ fig.update_layout(
 # Display in Streamlit
 st.plotly_chart(fig, use_container_width=True)
 
-# Links
-linkedin_url = "https://www.linkedin.com/in/josehzz/"
-medium_url = "https://medium.com/@josehzz112/predicting-btc-price-using-lstm-cnn-and-xgboost-118de0d5869a"
-st.write("How it was made: [Medium](%s)" % medium_url)
-st.write("Contact me: [Linkedin](%s)" % linkedin_url)
-
 st.write("Last Update: ", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
